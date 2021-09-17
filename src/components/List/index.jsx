@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Item from '../Item';
 import './index.css'
 
 class List extends Component {
@@ -6,20 +7,7 @@ class List extends Component {
     return (
       <div>
         <ul className="todo-main">
-          <li>
-            <label>
-              <input type="checkbox" />
-              <span>xxxxx</span>
-            </label>
-            <button className="btn btn-danger" style={{ display: 'none' }}>删除</button>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" />
-              <span>yyyy</span>
-            </label>
-            <button className="btn btn-danger" style={{ display: 'none' }}>删除</button>
-          </li>
+          <Item />
         </ul>
 
       </div>
