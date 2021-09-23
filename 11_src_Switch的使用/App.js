@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import MyNavlink from "./components/MyNavlink";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Test from "./pages/Test";
 
 export default class App extends Component {
   render() {
@@ -28,8 +29,8 @@ export default class App extends Component {
               <div className="panel-body">
                 <Switch>
                   <Route path="/home" component={Home} />
+                  <Route path="/home" component={Test} />
                   <Route path="/about" component={About} />
-                  <Redirect to="/home" />
                 </Switch>
               </div>
             </div>
