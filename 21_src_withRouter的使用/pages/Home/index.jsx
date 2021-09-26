@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Redirect, Switch, Route } from "react-router-dom";
-
-import MyNavlink from "../../components/MyNavlink";
+import MyNavLink from "../../components/MyNavLink";
+import { Route, Switch, Redirect } from "react-router-dom";
 import News from "./News";
 import Message from "./Message";
 
@@ -13,12 +12,13 @@ export default class Home extends Component {
         <div>
           <ul className="nav nav-tabs">
             <li>
-              <MyNavlink to="/home/news">News</MyNavlink>
+              <MyNavLink to="/home/news">News</MyNavLink>
             </li>
             <li>
-              <MyNavlink to="/home/message">Message</MyNavlink>
+              <MyNavLink to="/home/message">Message</MyNavLink>
             </li>
           </ul>
+          {/* 注册路由 */}
           <Switch>
             <Route path="/home/news" component={News} />
             <Route path="/home/message" component={Message} />
